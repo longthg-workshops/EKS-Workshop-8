@@ -69,7 +69,7 @@ argocd/apps  https://kubernetes.default.svc             mặc định  Đã đ�
 
 Chúng ta cũng có thể thấy Ứng dụng này trong giao diện ArgoCD ngay bây giờ:
 
-![EKS](/images/0006/00043.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00043.png?featherlight=false&width=90pc)
 
 Hoặc bạn cũng có thể tương tác với các đối tượng Argo CD trong cụm bằng cách sử dụng lệnh `kubectl`:
 

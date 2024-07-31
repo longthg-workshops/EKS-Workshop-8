@@ -23,4 +23,4 @@ $ prepare-environment automation/controlplanes/crossplane
 
 Crossplane mở rộng cụm Kubernetes của bạn để hỗ trợ việc điều phối bất kỳ cơ sở hạ tầng hoặc dịch vụ quản lý nào. Hãy tổ hợp các tài nguyên cụm Crossplane thành các trừơng tự cấp cao hơn có thể được quản lý, triển khai và tiêu thụ bằng cách sử dụng các công cụ yêu thích và quy trình hiện có của bạn.
 
-![EKS](/images/0006/00056.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00056.png?featherlight=false&width=90pc)

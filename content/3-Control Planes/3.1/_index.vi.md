@@ -27,4 +27,4 @@ Với ACK, bạn có thể tận dụng việc sử dụng các dịch vụ AWS 
 
 Trong lab này, chúng ta sẽ tận dụng ACK để cung cấp các dịch vụ này và tạo các secrets và configmaps chứa thông tin kết nối ứng dụng với các dịch vụ được quản lý bởi AWS này.
 
-![EKS](/images/0006/00052.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00052.png?featherlight=false&width=90pc)

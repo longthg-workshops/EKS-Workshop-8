@@ -12,7 +12,7 @@ Chúng ta đã thành công trong việc khởi động Flux trên cụm EKS và
 a
 Chúng ta đã tạo pipeline tích hợp liên tục trong bước chuẩn bị môi trường và bây giờ chúng ta cần triển khai nó và đang chạy.
 
-![EKS](/images/0006/00035.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00035.png?featherlight=false&width=90pc)
 
 Đầu tiên, sao chép kho lưu trữ CodeCommit cho mã nguồn ứng dụng:
 
@@ -65,7 +65,7 @@ https://console.aws.amazon.com/codesuite/codepipeline/pipelines/eks-workshop-ret
 
 Nó sẽ trông giống như này:
 
-![EKS](/images/0006/00036.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00036.png?featherlight=false&width=90pc)
 
 Kết quả của một lần chạy CodePipeline với CodeBuild là bạn sẽ có một hình ảnh mới trong ECR
 
@@ -75,7 +75,7 @@ $ echo IMAGE_URI_UI=$IMAGE_URI_UI
 
 Hậu tố `z7llv2` trong tên `retail-store-sample-ui-z7llv2` là ngẫu nhiên và sẽ khác nhau trong trường hợp của bạn.
 
-![EKS](/images/0006/00037.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00037.png?featherlight=false&width=90pc)
 
 Trong khi chúng ta đang chờ đợi ống dẫn để tạo ra các hình ảnh mới (5-10 phút), hãy [tự động hóa cập nhật hình ảnh vào Git](https://fluxcd.io/flux/guides/image-update/) bằng Flux Image Automation Controller.
 
@@ -147,7 +147,7 @@ $ kubectl apply -f ~/environment/retail-store-sample-codecommit/imageupdateautom
 
 Chúng ta đã tạo kiến trúc sau:
 
-![EKS](/images/0006/00038.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00038.png?featherlight=false&width=90pc)
 
 Bây giờ, hãy điều chỉnh các thay đổi.
 
@@ -192,7 +192,7 @@ $ export UI_URL=$(kubectl get ingress -n ui ui -o jsonpath="{.status.loadBalance
 $ wait-for-lb $UI_URL
 ```
 
-![EKS](/images/0006/00039.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00039.png?featherlight=false&width=90pc)
 
 Hãy giới thiệu các thay đổi vào mã nguồn của Ứng dụng Mẫu.
 
@@ -262,6 +262,6 @@ $ kubectl -n ui describe deployment ui | grep Image
 
 Sau khi xây dựng và triển khai thành công (5-10 phút), chúng ta sẽ có phiên bản mới của ứng dụng UI hoạt động.
 
-![EKS](/images/0006/00040.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00040.png?featherlight=false&width=90pc)
 
 Hãy cùng nhau tận hưởng phiên bản mới này! 🎉

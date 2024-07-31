@@ -8,7 +8,7 @@ pre: "<b> 3.2.2 </b>"
 
 Mặc định, thành phần **Carts** trong ứng dụng mẫu sử dụng một phiên bản cục bộ của DynamoDB chạy như một pod trong cụm EKS được gọi là `carts-dynamodb`. Trong phần này của lab, chúng ta sẽ cung cấp một bảng dựa trên đám mây của Amazon DynamoDB cho ứng dụng của chúng ta bằng cách sử dụng các tài nguyên được quản lý bởi Crossplane và trỏ **Carts** deployment để sử dụng bảng DynamoDB mới được cung cấp thay vì bản sao cục bộ.
 
-![EKS](/images/0006/00058.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00058.png?featherlight=false&width=90pc)
 
 SDK Java của AWS trong thành phần **Carts** có thể sử dụng IAM Roles để EKS tương tác với các dịch vụ AWS, điều này có nghĩa là chúng ta không cần phải truyền thông tin đăng nhập, giảm thiểu bề mặt tấn công. Trong ngữ cảnh của EKS, IRSA cho phép chúng ta xác định IAM Roles theo pod cho các ứng dụng sử dụng. Để tận dụng IRSA, trước tiên chúng ta cần:
 
@@ -108,11 +108,11 @@ $ wait-for-lb $(kubectl get service -n ui ui-nlb -o jsonpath="{.status.loadBalan
 
 Sau khi load balancer được cung cấp, bạn có thể truy cập nó bằng cách dán URL vào trình duyệt web của bạn. Bạn sẽ thấy giao diện người dùng từ cửa hàng web được hiển thị và có thể di chuyển xung quanh trang web như một người dùng.
 
-![EKS](/images/0006/00059.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00059.png?featherlight=false&width=90pc)
 
 Để xác minh rằng mô-đun **Carts** thực sự đang sử dụng bảng DynamoDB chúng ta vừa cung cấp, hãy thử thêm một vài mục vào giỏ hàng.
 
-![EKS](/images/0006/00060.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00060.png?featherlight=false&width=90pc)
 
 Và để kiểm tra xem các mục có trong bảng DynamoDB không, chạy
 

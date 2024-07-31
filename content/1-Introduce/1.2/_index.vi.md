@@ -23,12 +23,12 @@ Trong phần này, chúng ta sẽ tìm hiểu về các lệnh và đối số t
   $ docker ps -a
   ```
   
-![EKS](/images/part1/1.2/00010.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/part1/1.2/00010.png?featherlight=false&width=90pc)
   
 #### Khác biệt so với các máy ảo, các container không dùng để lưu trữ hệ điều hành.
 - Các container được dùng để chạy một nhiệm vụ hoặc quy trình cụ thể như để lưu trữ một phiên bản của máy chủ web hoặc máy chủ ứng dụng hoặc máy chủ cơ sở dữ liệu vv.
 
-![EKS](/images/part1/1.2/00011.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/part1/1.2/00011.png?featherlight=false&width=90pc)
   
   
 #### Làm thế nào để chỉ định một lệnh khác để bắt đầu container?
@@ -38,11 +38,11 @@ Trong phần này, chúng ta sẽ tìm hiểu về các lệnh và đối số t
   ```
 - Như vậy khi container bắt đầu nó chạy chương trình sleep, đợi 5 giây và sau đó thoát. Làm thế nào để thực hiện thay đổi đó một cách vĩnh viễn?
   
-![EKS](/images/part1/1.2/00012.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/part1/1.2/00012.png?featherlight=false&width=90pc)
   
 - Có các cách khác nhau để chỉ định lệnh, hoặc lệnh đơn giản như trong dạng shell hoặc dưới dạng mảng JSON.
  
-![EKS](/images/part1/1.2/00013.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/part1/1.2/00013.png?featherlight=false&width=90pc)
   
 - Bây giờ, xây dựng hình ảnh docker
   ```
@@ -53,7 +53,7 @@ Trong phần này, chúng ta sẽ tìm hiểu về các lệnh và đối số t
   $ docker run ubuntu-sleeper
   ```
   
-![EKS](/images/part1/1.2/00014.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/part1/1.2/00014.png?featherlight=false&width=90pc)
   
 #### Hướng dẫn Entrypoint
 - Lệnh entrypoint giống như lệnh command vì bạn có thể chỉ định chương trình sẽ được chạy khi container bắt đầu và bất kỳ điều gì bạn chỉ định trên dòng lệnh.

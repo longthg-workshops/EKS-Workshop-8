@@ -73,7 +73,7 @@ Bây giờ, hãy thử hiểu cách bảng DynamoDB được
 
  triển khai bằng cách sử dụng claim này:
 
-![EKS](/images/0006/00061.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00061.png?featherlight=false&width=90pc)
 
 Khi truy vấn claim `DynamoDBTable` được triển khai trong namespace carts, chúng ta có thể quan sát rằng nó chỉ đến và tạo một Composite Resource (XR) `XDynamoDBTable`
 
@@ -138,11 +138,11 @@ $ wait-for-lb $(kubectl get service -n ui ui-nlb -o jsonpath="{.status.loadBalan
 
 Khi trình cân bằng tải đã được triển khai, bạn có thể truy cập nó bằng cách dán URL vào trình duyệt web của bạn. Bạn sẽ thấy giao diện người dùng từ cửa hàng web được hiển thị và có thể di chuyển xung quanh trang web như một người dùng.
 
-![EKS](/images/0006/00062.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00062.png?featherlight=false&width=90pc)
 
 Để xác minh rằng **Carts** module đang sử dụng bảng DynamoDB mà chúng ta vừa triển khai, hãy thử thêm một vài mục vào giỏ hàng.
 
-![EKS](/images/0006/00063.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00063.png?featherlight=false&width=90pc)
 
 Và để kiểm tra xem các mục có trong bảng DynamoDB không, hãy chạy
 

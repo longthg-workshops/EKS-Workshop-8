@@ -52,11 +52,11 @@ $ wait-for-lb $(kubectl get service -n ui ui-nlb -o jsonpath="{.status.loadBalan
 
 Khi máy chủ tải trọng được cung cấp, bạn có thể truy cập nó bằng cách dán URL vào trình duyệt web của bạn. Bạn sẽ thấy giao diện người dùng từ cửa hàng web được hiển thị và sẽ có thể điều hướng xung quanh trang web như một người dùng.
 
-![EKS](/images/0006/00054.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00054.png?featherlight=false&width=90pc)
 
 Để xác minh rằng mô-đun **Carts** thực sự đang sử dụng bảng DynamoDB chúng ta vừa cung cấp, hãy thử thêm một vài mục vào giỏ hàng.
 
-![EKS](/images/0006/00055.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00055.png?featherlight=false&width=90pc)
 
 Và để kiểm tra xem các mục có trong giỏ hàng không, chạy
 

@@ -12,7 +12,7 @@ pre: "<b> 2.3 </b>"
 
 Chúng ta có thể tận dụng [mẫu ứng dụng của Argo CD](https://argo-cd.readthedocs.io/en/stable/operator-manual/cluster-bootstrapping/) để triển khai trường hợp sử dụng này. Mẫu này cho phép chúng ta chỉ định một ứng dụng Argo CD bao gồm các ứng dụng khác.
 
-![EKS](/images/0006/00047.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00047.png?featherlight=false&width=90pc)
 
 Chúng ta tham chiếu [kho Git EKS Workshop](https://github.com/aws-samples/eks-workshop-v2/tree/main/environment/eks-workshop/manifests/base) như một kho Git chứa các `base` manifests cho tài nguyên Kubernetes của bạn. Kho này sẽ chứa trạng thái tài nguyên ban đầu cho mỗi ứng dụng.
 

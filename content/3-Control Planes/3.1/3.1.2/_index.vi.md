@@ -8,7 +8,7 @@ pre: "<b> 3.1.2 </b>"
 
 Mặc định, thành phần **Carts** trong ứng dụng mẫu sử dụng một phiên bản cục bộ của DynamoDB chạy như một pod trong cụm EKS gọi là `carts-dynamodb`. Trong phần này của bài lab, chúng ta sẽ cung cấp một bảng DynamoDB dựa trên đám mây của Amazon cho ứng dụng của chúng ta bằng cách sử dụng tài nguyên tùy chỉnh của Kubernetes và chỉ định cho triển khai **Carts** sử dụng bảng DynamoDB mới được cung cấp thay vì bản sao cục bộ.
 
-![EKS](/images/0006/00053.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00053.png?featherlight=false&width=90pc)
 
 SDK Java của AWS trong thành phần **Carts** có thể sử dụng IAM Roles để tương tác với các dịch vụ AWS, điều này có nghĩa là chúng ta không cần phải truyền thông tin đăng nhập, từ đó giảm bớt bề mặt tấn công. Trong ngữ cảnh của EKS, IRSA cho phép chúng ta định nghĩa các IAM Roles riêng biệt cho các pod để ứng dụng tiêu thụ. Để tận dụng IRSA, trước tiên chúng ta cần:
 

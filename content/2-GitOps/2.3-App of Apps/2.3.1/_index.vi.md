@@ -81,7 +81,7 @@ $ kubectl -n argocd rollout status statefulset argocd-application-controller
 
 Mở giao diện người dùng Argo CD và điều hướng đến ứng dụng `apps`.
 
-![EKS](/images/0006/00048.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00048.png?featherlight=false&width=90pc)
 
 Nhấp vào `Refresh` và `Sync` trong giao diện người dùng ArgoCD, sử dụng `argocd` CLI để `Sync` ứng dụng hoặc chờ cho đến khi `Sync` tự động hoàn thành:
 
@@ -93,6 +93,6 @@ Chúng ta đã triển khai và đồng bộ hóa `App of Apps Application` củ
 
 Các ứng dụng của chúng tôi, ngoại trừ ứng dụng Argo CD `App of Apps Application`, đang ở trạng thái `Unknown` vì chúng ta chưa triển khai cấu hình của chúng.
 
-![EKS](/images/0006/00049.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00049.png?featherlight=false&width=90pc)
 
 Chúng ta sẽ triển khai cấu hình ứng dụng cho các ứng dụng trong bước tiếp theo.

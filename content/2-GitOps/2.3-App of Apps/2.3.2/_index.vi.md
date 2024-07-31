@@ -121,7 +121,7 @@ Bây giờ chúng ta đã chuyển toàn bộ các ứng dụng để triển kh
 
 Khi Argo CD hoàn tất quá trình đồng bộ, tất cả các ứng dụng của chúng ta sẽ ở trạng thái `Synced`.
 
-![EKS](/images/0006/00050.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00050.png?featherlight=false&width=90pc)
 
 Bạn cũng nên có tất cả các tài nguyên liên quan đến ứng dụng `ui` được triển khai. Để xác minh, hãy chạy các lệnh sau:
 
@@ -134,4 +134,4 @@ NAME                 READY   STATUS   RESTARTS   AGE
 ui-6d5bb7b95-rjfxd   1/1     Running  0          62 giây
 ```
 
-![EKS](/images/0006/00051.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00051.png?featherlight=false&width=90pc)

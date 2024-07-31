@@ -27,4 +27,4 @@ Argo CD cung cấp 3 cách để quản lý trạng thái ứng dụng của b�
 - Giao diện người dùng đô họa - Một giao diện người dùng dựa trên web cho phép bạn làm những điều tương tự như bạn có thể làm với CLI. Nó cũng cho phép bạn hình dung các tài nguyên Kubernetes thuộc các ứng dụng Argo CD mà bạn tạo.
 - Tài liệu Kubernetes và Helm Chart được áp dụng vào cụm.
 
-![EKS](/images/0006/00041.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00041.png?featherlight=false&width=90pc)

@@ -39,7 +39,7 @@ $ echo "Mật khẩu quản trị ArgoCD: $ARGOCD_PWD"
 
 Bạn sẽ nhìn thấy một màn hình giống như sau:
 
-![EKS](/images/0006/00042.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00042.png?featherlight=false&width=90pc)
 
 Argo CD cũng cung cấp một công cụ CLI mạnh mẽ gọi là `argocd` có thể được sử dụng để quản lý ứng dụng.
 

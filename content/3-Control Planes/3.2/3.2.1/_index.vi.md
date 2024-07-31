@@ -26,4 +26,4 @@ upbound-provider-family-aws-1ac09674120f     1/1     1            1           21
 
 Crossplane cung cấp một giao diện đơn giản hóa cho các nhà phát triển để yêu cầu tài nguyên cơ sở hạ tầng thông qua các tuyên bố Kubernetes gọi là yêu cầu. Như được hiển thị trong biểu đồ này, các yêu cầu là các tài nguyên Crossplane giới hạn trong phạm vi không gian tên, đóng vai trò là giao diện của nhà phát triển và trừu tượng hóa các chi tiết triển khai. Khi một yêu cầu được triển khai vào cụm, nó tạo ra một Tài nguyên Composite (XR), một tài nguyên tùy chỉnh Kubernetes đại diện cho một hoặc nhiều tài nguyên đám mây được xác định thông qua các mẫu gọi là Sáng tạo. Tài nguyên Composite tạo ra một hoặc nhiều Tài nguyên Quản lý tương tác với API AWS để yêu cầu tạo ra các tài nguyên cơ sở hạ tầng mong muốn.
 
-![EKS](/images/0006/00057.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00057.png?featherlight=false&width=90pc)

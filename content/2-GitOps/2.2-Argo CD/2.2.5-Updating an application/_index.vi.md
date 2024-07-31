@@ -61,7 +61,7 @@ $ argocd app sync apps
 
 Bây giờ chúng ta nên có 3 pods trong `ui` deployment
 
-![EKS](/images/0006/00046.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00046.png?featherlight=false&width=90pc)
 
 Để xác minh, chạy các lệnh sau:
 

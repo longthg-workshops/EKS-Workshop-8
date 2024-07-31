@@ -24,7 +24,7 @@ Trong phần này, chúng ta sẽ xem xét về các lệnh và đối số tron
      command: ["sleep2.0"]
      args: ["10"]
   ```
-![EKS](/images/part1/1.3/00015.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/part1/1.3/00015.png?featherlight=false&width=90pc)
   
 #### Tài liệu Tham Khảo Kubernetes
 - https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/

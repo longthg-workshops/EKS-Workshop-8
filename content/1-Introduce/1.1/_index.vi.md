@@ -12,7 +12,7 @@ Trong phần này, chúng ta sẽ tìm hiểu về cập nhật liên tục và 
 
 #### Triển khai và Phiên bản trong Quá trình Triển khai
 
-![EKS](/images/part1/1.1/0001.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/part1/1.1/0001.png?featherlight=false&width=90pc)
   
 #### Các lệnh Triển khai
 
@@ -25,14 +25,14 @@ Trong phần này, chúng ta sẽ tìm hiểu về cập nhật liên tục và 
   $ kubectl rollout history deployment/myapp-deployment
   ```
  
-![EKS](/images/part1/1.1/0002.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/part1/1.1/0002.png?featherlight=false&width=90pc)
   
 #### Chiến lược Triển khai
 - Có 2 loại chiến lược triển khai
   1. Tạo lại (Recreate)
   2. Cập nhật liên tục (RollingUpdate) (Chiến lược Mặc định)
   
-![EKS](/images/part1/1.1/0003.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/part1/1.1/0003.png?featherlight=false&width=90pc)
   
 #### kubectl apply
 - Để cập nhật một quá trình triển khai, chỉnh sửa quá trình triển khai và thực hiện các thay đổi cần thiết và lưu lại nó. Sau đó chạy lệnh dưới đây.
@@ -66,19 +66,19 @@ Trong phần này, chúng ta sẽ tìm hiểu về cập nhật liên tục và 
   ```
   $ kubectl set image deployment/myapp-deployment nginx=nginx:1.9.1
   ```
-![EKS](/images/part1/1.1/0004.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/part1/1.1/0004.png?featherlight=false&width=90pc)
   
 #### Tạo lại vs Cập nhật liên tục
   
-![EKS](/images/part1/1.1/0005.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/part1/1.1/0005.png?featherlight=false&width=90pc)
   
 #### Nâng cấp
 
-![EKS](/images/part1/1.1/0006.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/part1/1.1/0006.png?featherlight=false&width=90pc)
   
 #### Quay lại phiên bản trước
   
-![EKS](/images/part1/1.1/0007.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/part1/1.1/0007.png?featherlight=false&width=90pc)
   
 - Để hoàn tác một thay đổi
   ```
@@ -101,7 +101,7 @@ $ kubectl rollout history deployment/myapp-deployment
 $ kubectl rollout undo deployment/myapp-deployment
 ```
 
-![EKS](/images/part1/1.1/0008.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/part1/1.1/0008.png?featherlight=false&width=90pc)
  
 #### Tài liệu Tham khảo K8s
 - https://kubernetes.io/docs/concepts/workloads/controllers/deployment

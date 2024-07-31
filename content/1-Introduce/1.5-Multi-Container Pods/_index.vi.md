@@ -12,11 +12,11 @@ Trong phần này, chúng ta sẽ xem xét về các pod chứa nhiều containe
 
 #### Kiến trúc Monolith và Microservices
 
-![EKS](/images/part1/1.5/00032.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/part1/1.5/00032.png?featherlight=false&width=90pc)
   
 #### Các Pod Chứa Nhiều Container
 
-![EKS](/images/part1/1.5/00033.png?featherlight=false&width=40pc)
+![EKS](/EKS-Workshop-8/images/part1/1.5/00033.png?featherlight=false&width=40pc)
   
 - Để tạo một pod mới chứa nhiều container, hãy thêm thông tin về container mới vào tệp định nghĩa của pod.
   ```

@@ -44,7 +44,7 @@ Thư mục Git của bạn bây giờ nên trông giống như sau, bạn có th
 
 Mở giao diện Argo CD và điều hướng đến ứng dụng `apps`.
 
-![EKS](/images/0006/00044.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00044.png?featherlight=false&width=90pc)
 
 Cuối cùng, chúng ta có thể đẩy cấu hình của chúng ta lên kho Git:
 
@@ -62,7 +62,7 @@ $ argocd app sync apps
 
 Sau một khoảng thời gian ngắn, ứng dụng nên ở trạng thái `Synced` và các tài nguyên nên được triển khai, giao diện người dùng nên trông như sau:
 
-![EKS](/images/0006/00045.png?featherlight=false&width=90pc)
+![EKS](/EKS-Workshop-8/images/0006/00045.png?featherlight=false&width=90pc)
 
 Điều đó cho thấy rằng Argo CD đã tạo ra cấu hình kustomize cơ bản và nó đang được đồng bộ với cụm.
 
