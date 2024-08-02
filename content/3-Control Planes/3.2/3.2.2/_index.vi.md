@@ -10,7 +10,7 @@ Mặc định, thành phần **Carts** trong ứng dụng mẫu sử dụng mộ
 
 ![EKS](/EKS-Workshop-8/images/0006/00058.png?featherlight=false&width=90pc)
 
-SDK Java của AWS trong thành phần **Carts** có thể sử dụng IAM Roles để EKS tương tác với các dịch vụ AWS, điều này có nghĩa là chúng ta không cần phải truyền thông tin đăng nhập, giảm thiểu bề mặt tấn công. Trong ngữ cảnh của EKS, IRSA cho phép chúng ta xác định IAM Roles theo pod cho các ứng dụng sử dụng. Để tận dụng IRSA, trước tiên chúng ta cần:
+SDK Java của AWS trong thành phần **Carts** có thể sử dụng IAM Roles để EKS tương tác với các dịch vụ AWS, điều này có nghĩa là chúng ta không cần phải truyền thông tin đăng nhập, giảm thiểu diện tích tấn công. Trong ngữ cảnh của EKS, IRSA cho phép chúng ta xác định IAM Roles theo pod cho các ứng dụng sử dụng. Để tận dụng IRSA, trước tiên chúng ta cần:
 
 - Tạo một Kubernetes Service Account trong namespace Carts
 - Tạo một IAM Policy với các quyền DynamoDB cần thiết

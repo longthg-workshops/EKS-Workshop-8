@@ -8,7 +8,7 @@ pre: "<b> 3.2.3 </b>"
 
 ### Crossplane và Kubernetes
 
-Ngoài việc cung cấp các tài nguyên điện toán đám mây cá nhân, Crossplane còn cung cấp một lớp trừu tượng cao hơn gọi là Compositions. Compositions cho phép người dùng xây dựng các mẫu có quan điểm cho việc triển khai tài nguyên đám mây. Ví dụ, tổ chức có thể yêu cầu một số thẻ cụ thể phải hiện diện trong tất cả các tài nguyên AWS hoặc thêm các khóa mã hóa cụ thể cho tất cả các bucket Amazon Simple Storage (S3). Các nhóm nền tảng có thể xác định những trừu tượng API tự dịch vụ này trong Compositions và đảm bảo rằng tất cả các tài nguyên được tạo thông qua những Compositions này đều đáp ứng các yêu cầu của tổ chức.
+Ngoài việc cung cấp các tài nguyên điện toán đám mây cá nhân, Crossplane còn cung cấp một lớp trừu tượng cao hơn gọi là Compositions. Compositions cho phép người dùng xây dựng các mẫu theo ý cho việc triển khai tài nguyên đám mây. Ví dụ, tổ chức có thể yêu cầu một số thẻ cụ thể phải hiện diện trong tất cả các tài nguyên AWS hoặc thêm các khóa mã hóa cụ thể cho tất cả các bucket Amazon Simple Storage (S3). Các nhóm nền tảng có thể xác định những lớp trừu tượng API tự phục vụ trong Compositions và đảm bảo rằng tất cả các tài nguyên được tạo thông qua những Compositions này đều đáp ứng các yêu cầu của tổ chức.
 
 Một `CompositeResourceDefinition` (hoặc XRD) xác định loại và schema của tài nguyên Composite của bạn (XR). Nó cho phép Crossplane biết rằng bạn muốn một loại XR cụ thể nào đó tồn tại và các trường mà XR đó nên có. Một XRD giống như một CustomResourceDefinition (CRD), nhưng một chút có quan điểm hơn. Việc viết một XRD chủ yếu là vấn đề chỉ định một ["schema cấu trúc"](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) OpenAPI.
 
@@ -126,9 +126,7 @@ $ kubectl get service -n ui ui-nlb -o jsonpath="{.status.loadBalancer.ingress[*]
 k8s-ui-uinlb-a9797f0f61.elb.us-west-2.amazonaws.com
 ```
 
-:::info
 Vui lòng lưu ý rằng địa chỉ cuối cùng sẽ khác khi bạn chạy lệnh này vì một địa chỉ kết nối Mạng mới sẽ được triển khai.
-:::
 
 Để chờ đến khi trình cân bằng tải hoàn thành triển khai, bạn có thể chạy lệnh này:
 

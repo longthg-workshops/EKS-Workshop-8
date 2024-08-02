@@ -79,12 +79,10 @@ $ kubectl rollout status -n carts deployment/carts --timeout=120s
 ```
 
 :::info
-Lệnh này 'xây dựng' các tài liệu sử dụ
-
-ng lệnh kubectl kustomize, chuyển nó đến `envsubst` và sau đó đến kubectl apply. Điều này làm cho việc tạo mẫu tài liệu và điền thông tin vào chúng khi chạy trở nên dễ dàng.
+Lệnh này 'xây dựng' các tài liệu sử dụng lệnh kubectl kustomize, chuyển nó đến `envsubst` và sau đó đến kubectl apply. Điều này làm cho việc tạo mẫu tài liệu và điền thông tin vào chúng khi chạy trở nên dễ dàng.
 :::
 
-Các điều khiển ACK trong cụm sẽ phản ứng với các tài nguyên mới này và cung cấp cơ sở hạ tầng AWS mà chúng ta đã biểu thị bằng các tài liệu trước đó. Hãy kiểm tra xem ACK đã tạo bảng chưa bằng cách chạy
+Các trình điều khiển ACK trong cụm sẽ phản ứng với các tài nguyên mới này và cung cấp cơ sở hạ tầng AWS mà chúng ta đã biểu thị bằng các tài liệu trước đó. Hãy kiểm tra xem ACK đã tạo bảng chưa bằng cách chạy
 
 ```bash
 $ kubectl wait table.dynamodb.services.k8s.aws items -n carts --for=condition=ACK.ResourceSynced --timeout=15m
@@ -105,4 +103,4 @@ $ aws dynamodb list-tables
 }
 ```
 
-Đầu ra này cho chúng ta biết rằng bảng mới đã được tạo!
+Thông tin đầu ra này cho chúng ta biết rằng bảng mới đã được tạo!
