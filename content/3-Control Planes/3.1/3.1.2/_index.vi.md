@@ -24,19 +24,20 @@ $ eksctl create iamserviceaccount --name carts-ack \
   --namespace carts --cluster $EKS_CLUSTER_NAME \
   --role-name ${EKS_CLUSTER_NAME}-carts-ack \
   --attach-policy-arn $DYNAMODB_POLICY_ARN --approve
-2023-10-31 16:20:46 [i]  1 iamserviceaccount (carts/carts-ack) đã được bao gồm (dựa trên các quy tắc bao gồm/loại trừ)
-2023-10-31 16:20:46 [i]  1 tác vụ: {
-    2 các tác vụ tuần tự: {
-        tạo IAM role cho tài khoản dịch vụ "carts/carts-ack",
-        tạo tài khoản dịch vụ "carts/carts-ack",
-    } }2023-10-31 16:20:46 [ℹ]  đang xây dựng ngăn xếp iamserviceaccount "eksctl-eks-workshop-addon-iamserviceaccount-carts-carts-ack"
-2023-10-31 16:20:46 [i]  triển khai ngăn xếp "eksctl-eks-workshop-addon-iamserviceaccount-carts-carts-ack"
-2023-10-31 16:20:47 [i]  đang chờ ngăn xếp CloudFormation "eksctl-eks-workshop-addon-iamserviceaccount-carts-carts-ack"
-2023-10-31 16:21:17 [i]  đang chờ ngăn xếp CloudFormation "eksctl-eks-workshop-addon-iamserviceaccount-carts-carts-ack"
-2023-10-31 16:21:17 [i]  đã tạo tài khoản dịch vụ "carts/carts-ack"
+
+2023-10-31 16:20:46 [i]  1 iamserviceaccount (carts/carts-ack) was included (based on the include/exclude rules)
+2023-10-31 16:20:46 [i]  1 task: {
+    2 sequential sub-tasks: {
+        create IAM role for serviceaccount "carts/carts-ack",
+        create serviceaccount "carts/carts-ack",
+    } }2023-10-31 16:20:46 [â¹]  building iamserviceaccount stack "eksctl-eks-workshop-addon-iamserviceaccount-carts-carts-ack"
+2023-10-31 16:20:46 [i]  deploying stack "eksctl-eks-workshop-addon-iamserviceaccount-carts-carts-ack"
+2023-10-31 16:20:47 [i]  waiting for CloudFormation stack "eksctl-eks-workshop-addon-iamserviceaccount-carts-carts-ack"
+2023-10-31 16:21:17 [i]  waiting for CloudFormation stack "eksctl-eks-workshop-addon-iamserviceaccount-carts-carts-ack"
+2023-10-31 16:21:17 [i]  created serviceaccount "carts/carts-ack"
 ```
 
-`eksctl` cung cấp một ngăn xếp CloudFormation để hỗ trợ quản lý các tài nguyên này có thể được thấy trong đầu ra ở trên.
+`eksctl` cung cấp một CloudFormation stack để hỗ trợ quản lý các tài nguyên này được hiển thị trong các thông tin được xuất ở trên.
 
 Để tìm hiểu thêm về cách IRSA hoạt động, hãy đi đến [đây](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html).
 
@@ -65,15 +66,15 @@ Sử dụng tiện ích `envsubst`, chúng ta sẽ viết lại biến môi trư
 ```bash wait=10
 $ kubectl kustomize ~/environment/eks-workshop/modules/automation/controlplanes/ack/dynamodb \
   | envsubst | kubectl apply -f-
-namespace/carts không thay đổi
-serviceaccount/carts không thay đổi
-configmap/carts không thay đổi
-configmap/carts-ack đã được tạo
-service/carts không thay đổi
-service/carts-dynamodb không thay đổi
-triển khai.apps/carts đã được cấu hình
-triển khai.apps/carts-dynamodb không thay đổi
-table.dynamodb.services.k8s.aws/items đã được tạo
+namespace/carts unchanged
+serviceaccount/carts unchanged
+configmap/carts unchanged
+configmap/carts-ack created
+service/carts unchanged
+service/carts-dynamodb unchanged
+deployment.apps/carts configured
+deployment.apps/carts-dynamodb unchanged
+table.dynamodb.services.k8s.aws/items created
 $ kubectl rollout status -n carts deployment/carts --timeout=120s
 ```
 
@@ -87,7 +88,7 @@ Các điều khiển ACK trong cụm sẽ phản ứng với các tài nguyên m
 
 ```bash
 $ kubectl wait table.dynamodb.services.k8s.aws items -n carts --for=condition=ACK.ResourceSynced --timeout=15m
-table.dynamodb.services.k8s.aws/items điều kiện đã được đáp ứng
+table.dynamodb.services.k8s.aws/items condition met
 $ kubectl get table.dynamodb.services.k8s.aws items -n carts -ojson | yq '.status."tableStatus"'
 ACTIVE
 ```
